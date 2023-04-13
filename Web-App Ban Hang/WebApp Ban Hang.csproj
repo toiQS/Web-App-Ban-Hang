@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Entity\Web-App Ban Hang.Entity.csproj" />
-    <ProjectReference Include="..\Presistence\Web-App Ban Hang.Presistence.csproj" />
-    <ProjectReference Include="..\Services\Web-App Ban Hang.Services.csproj" />
+    <ProjectReference Include="..\Entity\WebApp Ban Hang.Entity.csproj" />
+    <ProjectReference Include="..\Presistence\WebApp Ban Hang.Presistence.csproj" />
+    <ProjectReference Include="..\Services\WebApp Ban Hang.Services.csproj" />
   </ItemGroup>
 
 </Project>
