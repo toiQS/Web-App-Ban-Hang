@@ -9,7 +9,7 @@ namespace WebApp_Ban_Hang.Entity
 {
     public class Permission
     {
-        [Required, MaxLength(10)]
+        [Key, Required, MaxLength(10)]
         public string PermissionId { get; set; }
         [Required, MaxLength(10)]
         public string PermissionName { get; set; }

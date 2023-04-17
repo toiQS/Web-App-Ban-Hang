@@ -10,7 +10,7 @@ namespace WebApp_Ban_Hang.Entity
 {
     public class AccountType
     {
-        [Required, MaxLength (20)]
+        [Key,Required, MaxLength (20)]
         public string AccountTypeID { get; set; }
         [Required, MaxLength (50)]
         public string TypeName { get; set; }

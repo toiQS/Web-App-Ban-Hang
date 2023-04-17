@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,9 @@ namespace WebApp_Ban_Hang.Entity
     public class AccountPermission
     {
 
-        [Required, MaxLength (10)]
+        [ForeignKey("Permission"), Required, MaxLength (10)]
         public string Permission { get; set; }
-        [Required, MaxLength(20)]
+        [ForeignKey("AccountType"),Required, MaxLength(20)]
         public string TypeID { get; set; } 
 
     }

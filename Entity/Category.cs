@@ -9,7 +9,7 @@ namespace WebApp_Ban_Hang.Entity
 {
     public class Category
     {
-        [Required, MaxLength (10)]
+        [Key,Required, MaxLength (10)]
         public int CategoryID { get; set; }
         [Required, MaxLength (50)]
         public string CategoryName { get; set; }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -10,11 +11,11 @@ namespace WebApp_Ban_Hang.Entity
 {
     public class AccountGroup
     {
-        [Key]
-        [Required, MaxLength(20)]
+        
+        [ForeignKey("Account"),Required, MaxLength(20)]
         public string UserName { get; set; }
-        [Key]
-        [Required, MaxLength(20)]
+        
+        [ForeignKey("AccountType"),Required, MaxLength(20)]
         public string AccountTypeId { get; set; }
 
     }
