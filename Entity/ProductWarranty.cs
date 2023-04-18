@@ -16,5 +16,6 @@ namespace WebApp_Ban_Hang.Entity
         public DateTime Warranty_Period { get; set; }
         [ForeignKey("Product"),Required, MaxLength(50)]
         public string Product_Line { get; set;}
+        public Product? Product { get; set;}
     }
 }

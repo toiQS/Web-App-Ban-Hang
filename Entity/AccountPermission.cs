@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,13 +10,17 @@ using System.Threading.Tasks;
 
 namespace WebApp_Ban_Hang.Entity
 {
+    [Keyless]
     public class AccountPermission
     {
 
-        [ForeignKey("Permission"), Required, MaxLength (10)]
-        public string Permission { get; set; }
+        [ForeignKey("Permission")]
+        [ Required, MaxLength (10)]
+        public string PermissionID { get; set; }
+        public Permission? Permissions { get; set; }
         [ForeignKey("AccountType"),Required, MaxLength(20)]
-        public string TypeID { get; set; } 
+        public string TypeID { get; set; }
+        public AccountType? AccountType { get; set; }
 
     }
 }

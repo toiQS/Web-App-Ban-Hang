@@ -14,6 +14,7 @@ namespace WebApp_Ban_Hang.Entity
         public int UserDetailId { get; set; }
         [ForeignKey("Account"),Required, MaxLength(20)]
         public string UserName { get; set; }
+        public Account? Account { get; set; }
         [Required, MaxLength(30)]
         public string? DetaledAddress { get; set; }
         [Required, MaxLength(20)]

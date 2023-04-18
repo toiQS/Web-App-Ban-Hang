@@ -25,10 +25,12 @@ namespace WebApp_Ban_Hang.Entity
         public DateTime Delete_At { get; set; }
         [ForeignKey("Account"),Required, MaxLength(20)]
         public DateTime Create_By { get; set; }
+        public Account? Account { get; set; }
         [ForeignKey("Brand"),Required, MaxLength(10)]
         public string BrandId { get; set; }
+        public Brand? Brand { get; set; }
         [ForeignKey("Category"),Required, MaxLength(10)]
-        public int Category { get; set; }
-
+        public int CategoryID { get; set; }
+        public Category? Category { get; set; }
     }
 }

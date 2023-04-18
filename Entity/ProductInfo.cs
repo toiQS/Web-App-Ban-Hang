@@ -14,6 +14,7 @@ namespace WebApp_Ban_Hang.Entity
         public int Info_ID { get; set; }
         [ForeignKey("Product"),Required, MaxLength(50)]
         public string Product_Line { get; set; }
+        public Product? Product { get; set; }
         public string Product_Infomation { get; set; }
     }
 }

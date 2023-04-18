@@ -14,6 +14,7 @@ namespace WebApp_Ban_Hang.Entity
         public int ImageID { get; set; }
         [ForeignKey("Product"),Required, MaxLength (50)]
         public string ProductLine { get; set; }
+        public Product? Product { get; set; }
         [Required, MaxLength (50)]
         public string ImageURL { get; set; }
     }

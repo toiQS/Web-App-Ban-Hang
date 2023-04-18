@@ -22,5 +22,6 @@ namespace WebApp_Ban_Hang.Entity
         public uint Total { get; set; }
         [ForeignKey("Account"),Required, MaxLength(20)]
         public string Comfirmed_by { get; set; }
+        public Account? Account { get; set; }
     }
 }
