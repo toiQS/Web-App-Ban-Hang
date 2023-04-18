@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Presistence\WebAppBanHang.Presistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Account\" />
+  </ItemGroup>
+
 </Project>
