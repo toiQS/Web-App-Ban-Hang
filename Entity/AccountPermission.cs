@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApp_Ban_Hang.Entity
+namespace WebAppBanHang.Entity
 {
     [Keyless]
     public class AccountPermission

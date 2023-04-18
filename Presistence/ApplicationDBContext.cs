@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApp_Ban_Hang.Entity;
+using WebAppBanHang.Entity;
 
-namespace WebApp_Ban_Hang.Presistence
+namespace WebAppBanHang.Presistence
 {
     public class ApplicationDBContext:DbContext
     {
