@@ -24,6 +24,6 @@ namespace WebAppBanHang.Presistence
         public DbSet<ProductInfo> ProductInfo { get; set; }
         public DbSet<ProductWarranty> ProductWarranty { get; set;}
         public DbSet<UserDetail> UserDetail { get; set; }
-        public DbSet<UserOrder> UserOrder { get; set; }
+
     }
 }

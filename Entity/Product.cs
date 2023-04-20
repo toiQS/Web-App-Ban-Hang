@@ -16,6 +16,8 @@ namespace WebAppBanHang.Entity
         public string Product_Line { get; set; }
         [Required, MaxLength (150)]
         public string Product_Name { get; set;}
+        [Required, MaxLength(50)]
+        public string Thumbnail { get; set; }
         [Required, MaxLength(10)]
         public int Price { get; set;}
         [Required, MaxLength(3)]
