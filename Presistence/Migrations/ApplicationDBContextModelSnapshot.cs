@@ -211,6 +211,11 @@ namespace WebAppBanHang.Presistence.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<string>("Thumbnail")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.HasKey("Product_Line");
 
                     b.HasIndex("AccountUserName");
@@ -343,44 +348,6 @@ namespace WebAppBanHang.Presistence.Migrations
                     b.ToTable("UserDetail");
                 });
 
-            modelBuilder.Entity("WebAppBanHang.Entity.UserOrder", b =>
-                {
-                    b.Property<string>("OrderID")
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
-
-                    b.Property<string>("AccountUserName")
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("Comfirmed_by")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<DateTime>("Create_At")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<long>("Total")
-                        .HasMaxLength(10)
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.HasKey("OrderID");
-
-                    b.HasIndex("AccountUserName");
-
-                    b.ToTable("UserOrder");
-                });
-
             modelBuilder.Entity("WebAppBanHang.Entity.AccountGroup", b =>
                 {
                     b.HasOne("WebAppBanHang.Entity.AccountType", "AccountType")
@@ -484,15 +451,6 @@ namespace WebAppBanHang.Presistence.Migrations
                         .HasForeignKey("UserName")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Account");
-                });
-
-            modelBuilder.Entity("WebAppBanHang.Entity.UserOrder", b =>
-                {
-                    b.HasOne("WebAppBanHang.Entity.Account", "Account")
-                        .WithMany()
-                        .HasForeignKey("AccountUserName");
 
                     b.Navigation("Account");
                 });
