@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Account\**" />
+    <EmbeddedResource Remove="Account\**" />
+    <None Remove="Account\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.5" />
@@ -21,10 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Entity\WebAppBanHang.Entity.csproj" />
     <ProjectReference Include="..\Presistence\WebAppBanHang.Presistence.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Account\" />
   </ItemGroup>
 
 </Project>
