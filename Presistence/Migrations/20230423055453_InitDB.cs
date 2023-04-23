@@ -154,6 +154,7 @@ namespace WebAppBanHang.Presistence.Migrations
                 {
                     Product_Line = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Product_Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Thumbnail = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Price = table.Column<int>(type: "int", maxLength: 10, nullable: false),
                     Discount = table.Column<long>(type: "bigint", maxLength: 3, nullable: false),
                     Create_At = table.Column<DateTime>(type: "datetime2", nullable: false),

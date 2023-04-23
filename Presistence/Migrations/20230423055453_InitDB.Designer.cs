@@ -12,7 +12,7 @@ using WebAppBanHang.Presistence;
 namespace WebAppBanHang.Presistence.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20230418092006_InitDB")]
+    [Migration("20230423055453_InitDB")]
     partial class InitDB
     {
         /// <inheritdoc />
@@ -213,6 +213,11 @@ namespace WebAppBanHang.Presistence.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Thumbnail")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Product_Line");
 

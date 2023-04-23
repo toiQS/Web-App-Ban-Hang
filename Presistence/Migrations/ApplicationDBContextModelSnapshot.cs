@@ -211,6 +211,11 @@ namespace WebAppBanHang.Presistence.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<string>("Thumbnail")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.HasKey("Product_Line");
 
                     b.HasIndex("AccountUserName");
