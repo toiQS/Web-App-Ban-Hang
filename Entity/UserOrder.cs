@@ -12,7 +12,7 @@ namespace WebAppBanHang.Entity
     public class UserOrder
     {
         [Key,Required, MaxLength(11)]
-        public string OrderID { get; set; }
+        public int OrderID { get; set; }
         [ForeignKey("UserOrder.Account"),Required, MaxLength(20)]
         public string UserName { get; set; }
         public DateTime Create_At { get; set; }
